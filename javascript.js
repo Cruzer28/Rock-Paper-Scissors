@@ -53,5 +53,17 @@ function playRound() {
     }
 }
 
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+        console.log("Your score: " + humanScore + " | Computer Score: " + computerScore);
+    }
+    
+    if (humanScore > computerScore) {
+        console.log("YOU WON THE GAME! NICE JOB!");
+    } else if (humanScore < computerScore) {
+        console.log("YOU GOT BEAT BY A COMPUTER! BETTER LUCK NEXT TIME!");
+    } else console.log("IT'S A TIE! BETTER LUCK NEXT TIME!")
+}
 
-playRound();
+playGame();
